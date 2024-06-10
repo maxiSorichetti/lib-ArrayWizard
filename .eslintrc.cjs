@@ -21,10 +21,10 @@ module.exports = {
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module",
-    "project": "./tsconfig.json"
+    "project": "./tsconfig.json" // para connfigurar eslint con typescript
   },
   "plugins": ["simple-import-sort"],
-  "ignorePatterns": [".eslintrc.cjs", "dist", "node_modules", "vite.config.ts"],
+  "ignorePatterns": [".eslintrc.cjs", "dist", "node_modules"],
   "rules": {
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",

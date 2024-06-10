@@ -21,7 +21,7 @@ module.exports = {
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module",
-    "project": "./tsconfig.json"
+    "project": "./tsconfig.json" // para connfigurar eslint con typescript
   },
   "plugins": ["simple-import-sort"],
   "ignorePatterns": [".eslintrc.cjs", "dist", "node_modules"],

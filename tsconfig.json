@@ -23,6 +23,8 @@
   },
   "include": [
     "src/**/*", // Assuming your TypeScript files are in the src directory
-    ".eslintrc.cjs"
+    "vite.config.ts", // Asegúrate de incluir este archivo si no está en src/
+    ".eslintrc.cjs",
+    "vitest.config.ts",
   ]
 }

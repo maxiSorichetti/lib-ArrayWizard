@@ -1,3 +1,4 @@
 export const fn = (someParameter: string): void => {
-  console.log("someParameter", someParameter);
-};
+  // eslint-disable-next-line no-console
+  console.log('someParameter', someParameter)
+}

@@ -1,4 +1,2 @@
-export const fn = (someParameter: string): void => {
-  // eslint-disable-next-line no-console
-  console.log('someParameter', someParameter)
-}
+export * from './check'
+export * from './types'

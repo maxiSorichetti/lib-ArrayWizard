@@ -33,6 +33,7 @@
     "src",
     "vite.config.ts",
     "commitlint.config.cjs",
-    "vitest.config.ts"
+    "vitest.config.ts",
+    "tests/"
   ],
 }

@@ -24,7 +24,7 @@ module.exports = {
     "project": "./tsconfig.json" // para connfigurar eslint con typescript
   },
   "plugins": ["simple-import-sort"],
-  "ignorePatterns": [".eslintrc.cjs", "dist", "node_modules"],
+  "ignorePatterns": [".eslintrc.cjs", "dist", "node_modules", "commitlint.config.cjs"],
   "rules": {
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",

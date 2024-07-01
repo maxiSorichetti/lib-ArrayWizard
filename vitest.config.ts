@@ -12,6 +12,14 @@ export default mergeConfig(
       // environment: 'jsdom' // emular tiempos, creamos un entorno virtual no usamos el browser real
       alias: {
         '@src': path.resolve(__dirname, '/src')
+      },
+      coverage: {
+        thresholds: {
+          lines: 50,
+          functions: 50,
+          branches: 50,
+          statements: 50
+        }
       }
     }
   })

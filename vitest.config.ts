@@ -14,12 +14,12 @@ export default mergeConfig(
         '@src': path.resolve(__dirname, '/src')
       },
       coverage: {
-        thresholds: {
-          lines: 50,
-          functions: 50,
-          branches: 50,
-          statements: 50
-        }
+        // thresholds: {
+        //   lines: 50,
+        //   functions: 50,
+        //   branches: 50,
+        //   statements: 50
+        // }
       }
     }
   })

@@ -1,4 +1,6 @@
 export * from './arraylable'
+export * from './flattering'
+export * from './intersection'
 export * from './map'
 export * from './sum'
 export * from './uniqueElements'

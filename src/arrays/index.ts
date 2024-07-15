@@ -1,4 +1,5 @@
 export * from './arraylable'
+export * from './difference'
 export * from './flattering'
 export * from './intersection'
 export * from './map'

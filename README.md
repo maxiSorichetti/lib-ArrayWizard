@@ -50,10 +50,10 @@ npm run <script>
 To use this library, import the necessary methods into your TypeScript or JavaScript project.
 
 ```typescript
-import { sum, map, difference, flattering, intersection, uniqueElements, groupBy } from 'prop-seeker';
-import { isEmpty, isNullOrUndefined, isObject, isObjectLike, isString } from 'prop-seeker';
-import { capitalize, includes } from 'prop-seeker';
-import { throttle, debounce } from 'prop-seeker';
+import { sum, map, difference, flattering, intersection, uniqueElements, groupBy } from 'array-wizard';
+import { isEmpty, isNullOrUndefined, isObject, isObjectLike, isString } from 'array-wizard';
+import { capitalize, includes } from 'array-wizard';
+import { throttle, debounce } from 'array-wizard';
 ```
 
 ## Arrays
@@ -62,49 +62,61 @@ import { throttle, debounce } from 'prop-seeker';
   - Converts a value to an array if it is not already an array. If the value is `null`, it returns an empty array.
 
   - Example:
-  import { arraylable } from 'prop-seeker';
+  ```typescript
+
+  import { arraylable } from 'array-wizard';
 
   console.log(arraylable(null)); // []
   console.log(arraylable([1, 2, 3])); // [1, 2, 3]
   console.log(arraylable('string')); // []
+  ```
 
 - **chunks** 🍰
   - Splits an array into chunks of a specified size. Returns an array of arrays, each containing a subset of the original array.
   - Example:
-  import { chunks } from 'prop-seeker';
+  ```typescript
+  import { chunks } from 'array-wizard';
 
   console.log(chunks([1, 2, 3, 4, 5], 2)); // [[1, 2], [3, 4], [5]]
   console.log(chunks([1, 2, 3], 5)); // [[1, 2, 3]]
   console.log(chunks([], 2)); // []
+  ```
 
 - **difference** ➖
   - Returns the elements of the first array that are not present in the second array.
   - Example:
-  import { difference } from 'prop-seeker';
+  ```typescript
+  import { difference } from 'array-wizard';
 
   console.log(difference([1, 2, 3], [2, 3, 4])); // [1]
   console.log(difference(['a', 'b', 'c'], ['b', 'd'])); // ['a', 'c']
+  ```
 
 - **flattering** 🌟
   - Flattens an array up to a specified depth. Returns a new array with all sub-array elements concatenated into it recursively up to the specified depth.
   - Example:
-  import { flattering } from 'prop-seeker';
+  ```typescript
+  import { flattering } from 'array-wizard';
 
   console.log(flattening([1, [2, [3, [4]], 5]], 2)); // [1, 2, 3, [4], 5]
   console.log(flattening([1, [2, [3, [4]], 5]], 1)); // [1, 2, [3, [4]], 5]
+  ```
 
 - **intersection** ✴️
   - Returns an array containing the elements common to both arrays.
   - Exapmle:
-  import { intersection } from 'prop-seeker';
+  ```typescript
+  import { intersection } from 'array-wizard';
 
   console.log(intersection([1, 2, 3], [2, 3, 4])); // [2, 3]
   console.log(intersection(['a', 'b', 'c'], ['b', 'c', 'd'])); // ['b', 'c']
+  ```
 
 - **group by** ✴️
   - Groups elements of an array into an object according to a generated key, and returns said object.
   - Example:
-  import { groupBy } from 'prop-seeker';
+  ```typescript
+  import { groupBy } from 'array-wizard';
 
   const array = [
     { category: 'fruit', name: 'apple' },
@@ -123,11 +135,13 @@ import { throttle, debounce } from 'prop-seeker';
   //     { category: 'vegetable', name: 'carrot' }
   //   ]
   // }
+  ```
 
 - **map** 🗺️
   - Applies a transformation function to each element of an array and returns a new array with the transformed elements.
   - Example:
-  import { map } from 'prop-seeker';
+  ```typescript
+  import { map } from 'array-wizard';
 
   const numbers = [1, 2, 3];
   const doubled = map(numbers, x => x * 2);
@@ -136,30 +150,35 @@ import { throttle, debounce } from 'prop-seeker';
   const words = ['hello', 'world'];
   const lengths = map(words, x => x.length);
   console.log(lengths); // [5, 5]
+  ```
 
 - **sum** ➕
   - Sums all the numbers in an array and returns the total.
   - Example:
-  import { sum } from 'prop-seeker';
+  ```typescript
+  import { sum } from 'array-wizard';
 
   console.log(sum([1, 2, 3, 4])); // 10
   console.log(sum([10, -5, 5])); // 10
+  ```
 
 - **uniqueElements** 🌈
   - Returns a new array with unique elements, removing duplicates from the original array.
   - Example:
-  import { uniqueElements } from 'prop-seeker';
+  ```typescript
+  import { uniqueElements } from 'array-wizard';
 
   console.log(uniqueElements([1, 2, 2, 3, 4, 4])); // [1, 2, 3, 4]
   console.log(uniqueElements(['a', 'b', 'b', 'c'])); // ['a', 'b', 'c']
-
+  ```
 
 ## Check
 
 - **isEmpty** 🏷️
   - Checks if a value is empty. For objects, it checks if the object has no own properties. For other types, it checks if the value is falsy.
   - Example:
-  import { isEmpty } from 'prop-seeker';
+  ```typescript
+  import { isEmpty } from 'array-wizard';
 
   /*
     @param value: Object | Array | string | number | boolean
@@ -173,11 +192,13 @@ import { throttle, debounce } from 'prop-seeker';
   console.log(isEmpty({ key: 'value' })); // false
   console.log(isEmpty([1, 2, 3])); // false
   console.log(isEmpty('string')); // false
+  ```
 
 - **isNullOrUndefined** ❓
   - Checks if a value is `null` or `undefined`.
   - Example:
-  import { isNullOrUndefined } from 'prop-seeker';
+  ```typescript
+  import { isNullOrUndefined } from 'array-wizard';
 
   /*
     @param value: unknown
@@ -189,12 +210,13 @@ import { throttle, debounce } from 'prop-seeker';
   console.log(isNullOrUndefined(undefined)); // true
   console.log(isNullOrUndefined('string')); // false
   console.log(isNullOrUndefined(123)); // false
-
+  ```
 
 - **isObject** 🛠️
   - Checks if a value is an object. Returns `false` for `null` and non-object types.
   - Example:
-  import { isObject } from 'prop-seeker';
+  ```typescript
+  import { isObject } from 'array-wizard';
 
   /*
     @param value: unknown
@@ -207,11 +229,13 @@ import { throttle, debounce } from 'prop-seeker';
   console.log(isObject(null)); // false
   console.log(isObject('string')); // false
   console.log(isObject(123)); // false
+  ```
 
 - **isObjectLike** 🌐
   - Checks if a value is object-like. Excludes `Date`, `RegExp`, arrays, `null`, and other non-object types.
   - Example:
-  import { isObjectLike } from 'prop-seeker';
+  ```typescript
+  import { isObjectLike } from 'array-wizard';
 
   /*
     @param value: unknown
@@ -224,11 +248,13 @@ import { throttle, debounce } from 'prop-seeker';
   console.log(isObjectLike([])); // false
   console.log(isObjectLike(new Date())); // false
   console.log(isObjectLike(/regex/)); // false
+  ```
 
 - **isString** 🔤
   - Checks if a value is a string.
   - Example:
-  import { isString } from 'prop-seeker';
+  ```typescript
+  import { isString } from 'array-wizard';
 
   /*
     @param value: unknown
@@ -241,13 +267,15 @@ import { throttle, debounce } from 'prop-seeker';
   console.log(isString(123)); // false
   console.log(isString({})); // false
   console.log(isString([])); // false
+  ```
 
 ## Strings
 
 - **capitalize** 🔠
   - Capitalizes the first letter of each word in a string and converts the rest of the letters to lowercase.
   - Example:
-  import { capitalize } from 'prop-seeker';
+  ```typescript
+  import { capitalize } from 'array-wizard';
 
   /*
     @param s: string
@@ -262,12 +290,13 @@ import { throttle, debounce } from 'prop-seeker';
   console.log(capitalize('')); // ""
   console.log(capitalize('a')); // "A"
   console.log(capitalize(123 as any)); // 123 (since 123 is not a string)
-
+  ```
 
 - **includes** 🔍
   - Checks if a string contains a specified substring. Returns `false` if either argument is not a string.
   - Example:
-  import { includes } from 'prop-seeker';
+  ```typescript
+  import { includes } from 'array-wizard';
 
   /*
     @param stringValue: string
@@ -287,13 +316,15 @@ import { throttle, debounce } from 'prop-seeker';
   console.log(includes('', '')); // true
   console.log(includes('', 'empty')); // false
   console.log(includes(123 as any, '23')); // false (since 123 is not a string)
+  ```
 
 ## Timing
 
 - **throttle** ⏳
   - Creates a throttled function that only invokes the provided function at most once per every specified delay period.
   - Example:
-  import { throttle } from 'prop-seeker';
+  ```typescript
+  import { throttle } from 'array-wizard';
 
   // Function to handle button click
   const handleClick = () => {
@@ -323,12 +354,13 @@ import { throttle, debounce } from 'prop-seeker';
   };
 
   export default MyComponent;
-
+  ```
 
 - **debounce** ⌛
   - Creates a debounced function that delays the invocation of the provided function until after a specified delay period has elapsed since the last time the debounced function was invoked.
   - Example:
-  import { debounce } from 'prop-seeker';
+  ```typescript
+  import { debounce } from 'array-wizard';
 
   // Function to fetch search results
   const fetchResults = (query: string) => {
@@ -344,7 +376,7 @@ import { throttle, debounce } from 'prop-seeker';
   debouncedFetchResults('ab');
   debouncedFetchResults('abc');
   // Only the last call will be executed after 300ms
-
+  ```
 
 ## Contributing
 

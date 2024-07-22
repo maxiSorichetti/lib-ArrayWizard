@@ -1,8 +1,21 @@
 {
-  "name": "prop-seeker",
-  "private": true,
-  "version": "0.0.0",
+  "name": "array-wizard",
+  "version": "0.0.1",
   "type": "module",
+  "main": "./dist/array-wizard.js",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/array-wizard.js",
+      "export": "./dist/array-wizard.js"
+    }
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc && vite build",
     "lint": "eslint . --ext .ts",

@@ -1,6 +1,7 @@
 export * from './arraylable'
 export * from './difference'
 export * from './flattering'
+export * from './groupBy'
 export * from './intersection'
 export * from './map'
 export * from './sum'

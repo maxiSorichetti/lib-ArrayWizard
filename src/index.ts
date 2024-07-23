@@ -1,3 +1,5 @@
+export * from './arrays'
 export * from './check'
 export * from './strings'
+export * from './timing'
 export * from './types'

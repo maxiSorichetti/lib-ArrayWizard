@@ -1,6 +1,6 @@
 {
   "name": "array-wizard",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "main": "./dist/array-wizard.js",
   "types": "./dist/src/index.d.ts",

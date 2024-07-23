@@ -1,11 +1,11 @@
-# Prop Seeker 📜
+# Array Wizard 📜
 
 ![Build](https://img.shields.io/badge/build-passing-brightgreen)
 ![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen)
 
 ## Description
 
-Prop Seeker is a utility library developed in TypeScript with support for React and Vite projects. This library provides useful methods for array manipulation, validations, string operations, among others.
+Array Wizard is a utility library developed in TypeScript with support for React and Vite projects. This library provides useful methods for array manipulation, validations, string operations, among others.
 
 ## Table of Contents
 

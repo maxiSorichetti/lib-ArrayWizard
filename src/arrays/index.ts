@@ -1,4 +1,5 @@
 export * from './arraylable'
+export * from './chunks'
 export * from './difference'
 export * from './flattering'
 export * from './groupBy'

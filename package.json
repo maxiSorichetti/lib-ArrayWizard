@@ -1,13 +1,13 @@
 {
   "name": "array-wizard",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
-  "main": "./dist/array-wizard.js",
+  "main": "./dist/array-wizard.umd.cjs",
   "types": "./dist/src/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/array-wizard.js",
-      "export": "./dist/array-wizard.js"
+      "export": "./dist/array-wizard.umd.cjs"
     }
   },
   "publishConfig": {

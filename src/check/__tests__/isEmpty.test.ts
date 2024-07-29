@@ -9,11 +9,15 @@ import { isEmpty } from '..'
         si recibe {} -> true
         si recibe [1,3] -> false
         si recibe {name: 'gustavo'} -> false
+        si recibe '' -> false
+        si recibe 'hello' -> false
 */
 describe('isEmpty', () => {
   it.each([
     { tested: null, expected: true, label: null },
-    { tested: {}, expected: true, label: {} }
+    { tested: {}, expected: true, label: {} },
+    { tested: '', expected: true, label: '' },
+    { tested: 'hello', expected: false, label: 'hello' }
   ])('isEmpty($label) should be $expected', ({ tested, expected }) => {
     expect(isEmpty(tested)).toBe(expected)
   })

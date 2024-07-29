@@ -81,8 +81,8 @@ import { throttle, debounce } from 'array-wizard';
   ```typescript
   import { flattering } from 'array-wizard';
 
-  console.log(flattening([1, [2, [3, [4]], 5]], 2)); // [1, 2, 3, [4], 5]
-  console.log(flattening([1, [2, [3, [4]], 5]], 1)); // [1, 2, [3, [4]], 5]
+  console.log(flattering([1, [2, [3, [4]], 5]], 2)); // [1, 2, 3, [4], 5]
+  console.log(flattering([1, [2, [3, [4]], 5]], 1)); // [1, 2, [3, [4]], 5]
   ```
 
 - **intersection** ✴️
@@ -310,7 +310,7 @@ import { throttle, debounce } from 'array-wizard';
   import { throttle } from 'array-wizard';
 
   // Function to handle button click
-  const handleClick = () => {
+  const handleClick = (): void => {
     console.log('Button clicked');
     // Handle button click here
   };
@@ -328,7 +328,7 @@ import { throttle, debounce } from 'array-wizard';
   // Example usage in a React component
   import React from 'react';
 
-  const MyComponent = () => {
+  const MyComponent: React.FC = () => {
     return (
       <button onClick={throttledHandleClick}>
         Click me
@@ -343,22 +343,39 @@ import { throttle, debounce } from 'array-wizard';
   - Creates a debounced function that delays the invocation of the provided function until after a specified delay period has elapsed since the last time the debounced function was invoked.
   - Example:
   ```typescript
+  import React, { useState, useCallback } from 'react';
   import { debounce } from 'array-wizard';
 
   // Function to fetch search results
-  const fetchResults = (query: string) => {
+  const fetchResults = (query) => {
     console.log(`Fetching results for ${query}`);
-    // Make API request here
   };
 
   // Debounced version of the fetchResults function
   const debouncedFetchResults = debounce(fetchResults, 300);
 
-  // Simulate typing
-  debouncedFetchResults('a');
-  debouncedFetchResults('ab');
-  debouncedFetchResults('abc');
-  // Only the last call will be executed after 300ms
+  const SearchComponent: React.FC = () => {
+    const [query, setQuery] = useState('');
+
+    // Callback
+    const handleInputChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
+      const newQuery = event.target.value;
+      setQuery(newQuery);
+      debouncedFetchResults(newQuery);
+    }, [debouncedFetchResults]);
+
+    return (
+      <input
+        type="text"
+        value={query}
+        onChange={handleInputChange}
+        placeholder="Search..."
+      />
+    );
+  };
+
+  export default SearchComponent;
+
   ```
 
 ## Contributing

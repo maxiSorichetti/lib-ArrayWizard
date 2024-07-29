@@ -1,6 +1,6 @@
 {
   "name": "array-wizard",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "type": "module",
   "main": "./dist/array-wizard.umd.cjs",
   "types": "./dist/src/index.d.ts",

@@ -28,23 +28,6 @@ To install the project dependencies, run:
 npm install
 ```
 
-# Scripts
-
-These are the available scripts in the project:
-
-- `build`: Compiles the project and builds the production files.
-- `lint`: Runs ESLint to analyze the code.
-- `check:types`: Verifies TypeScript types without emitting files.
-- `prepare`: Sets up Husky for pre-commit hooks.
-- `test`: Runs the tests using Vitest and generates a coverage report.
-- `test:watch`: Runs the tests in watch mode.
-
-To run these scripts, use:
-
-```bash
-npm run <script>
-```
-
 # Usage
 
 To use this library, import the necessary methods into your TypeScript or JavaScript project.
